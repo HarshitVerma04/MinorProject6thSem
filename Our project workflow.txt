@@ -1,0 +1,20 @@
+the workflow is as follows:
+
+
+Phase1:
+train model on real images(celebA datset) and fake ones(stable_diffusion dataset)
+test on real+styelgan2_fake
+these were all on raw rgb formats of the image
+
+
+Phase 2:
+generate feature images using filters for all 3(celebA real, stable_diffusionfake, style_ganfake)
+
+
+phase 3:
+train model on celebA real(rgb,feature image) and stable_diffusionfake(rgb+feature image)
+test on celebAreal(rgb,feature image) and style_ganfake(rgb,feature image)
+
+
+our objective:
+see if prediction accuracy increases in phase 3 compared to phase 1.
