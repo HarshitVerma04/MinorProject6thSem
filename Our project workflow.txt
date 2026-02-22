@@ -18,3 +18,8 @@ test on celebAreal(rgb,feature image) and style_ganfake(rgb,feature image)
 
 our objective:
 see if prediction accuracy increases in phase 3 compared to phase 1.
+
+
+goodle drive link for images required in the 3 phases:
+
+https://drive.google.com/drive/folders/1d7Cxxw5PbuFqC6P0mWb015Q_QQRc1a5D?usp=sharing
