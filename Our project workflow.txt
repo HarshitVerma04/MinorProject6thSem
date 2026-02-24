@@ -1,25 +1,183 @@
-the workflow is as follows:
+🎯 Final Experimental Plan (3 Phases)
 
+We will train 7 models total in each phase.
 
-Phase1:
-train model on real images(celebA datset) and fake ones(stable_diffusion dataset)
-test on real+styelgan2_fake
-these were all on raw rgb formats of the image
+🔹 Phase 1 – RGB Only
 
+Input: 224×224 RGB images
+Train the following 7 models:
 
-Phase 2:
-generate feature images using filters for all 3(celebA real, stable_diffusionfake, style_ganfake)
+ResNet18
 
+VGG16
 
-phase 3:
-train model on celebA real(rgb,feature image) and stable_diffusionfake(rgb+feature image)
-test on celebAreal(rgb,feature image) and style_ganfake(rgb,feature image)
+DenseNet121
 
+EfficientNet-B0
 
-our objective:
-see if prediction accuracy increases in phase 3 compared to phase 1.
+MobileNetV2
 
+ViT-B/16
 
-goodle drive link for images required in the 3 phases:
+Proposed Hybrid Model (custom architecture)
 
-https://drive.google.com/drive/folders/1d7Cxxw5PbuFqC6P0mWb015Q_QQRc1a5D?usp=sharing
+Evaluation:
+
+For both test_seen and test_unseen:
+
+Accuracy
+
+Precision
+
+Recall
+
+F1-score
+
+Confusion matrix
+
+ROC curve
+
+AUC (Area Under Curve)
+
+We will store predicted probabilities (not just labels) to compute ROC/AUC.
+
+🔹 Phase 2 – Feature Images Only
+
+We will generate feature-domain representations from the same dataset (same splits, same labels).
+
+Examples of possible feature representations:
+
+FFT magnitude spectrum
+
+High-pass filtered residual
+
+SRM filter outputs
+
+DCT-based feature maps
+
+These feature images will replace RGB input.
+
+We will train the same 7 models again using feature-only input.
+
+Evaluation metrics remain identical:
+
+Accuracy
+
+F1
+
+ROC
+
+AUC (seen + unseen)
+
+Confusion matrices
+
+Goal of Phase 2:
+To analyze whether artifact-based representations improve cross-generator generalization.
+
+🔹 Phase 3 – RGB + Feature Fusion
+
+We will fuse RGB and Feature representations.
+
+Fusion strategy:
+
+Early fusion (GPU-safe):
+
+RGB (3 channels) + Feature (1 channel)
+
+Create 4-channel input
+
+Modify first convolution layer of each CNN model to accept 4 channels
+
+For ViT, modify patch embedding input channels
+
+All 7 models will be retrained from scratch with 4-channel input.
+
+Evaluation:
+
+Accuracy (seen + unseen)
+
+F1 (seen + unseen)
+
+ROC curves
+
+AUC (primary metric for research)
+
+Confusion matrices
+
+Primary metric of interest:
+Unseen AUC
+
+🔥 Proposed Hybrid Model (Innovation Component)
+
+We are also designing a custom hybrid architecture that combines:
+
+Residual backbone (ResNet-style feature extraction)
+
+VGG-style convolution refinement block
+
+Channel attention mechanism (e.g., SE block)
+
+Dropout + classifier
+
+Purpose:
+
+To improve detection of subtle AI-generated artifacts while maintaining strong gradient propagation and generalization.
+
+We will perform ablation study:
+
+Backbone only
+
+Backbone + refinement block
+
+Backbone + refinement + attention
+
+And compare unseen AUC.
+
+📊 Final Paper-Ready Outputs
+
+We will include:
+
+Training & validation loss curves
+
+Accuracy curves
+
+ROC curves (seen + unseen)
+
+AUC tables
+
+Confusion matrices
+
+Ablation study table
+
+Grad-CAM visualizations for best models
+
+Parameter comparison table
+
+Inference time comparison
+
+Important:
+ROC and AUC are core metrics. Accuracy alone is not sufficient.
+
+🧠 Hardware Constraints
+
+RTX 3050 (4GB VRAM)
+
+Use pretrained models
+
+Mixed precision training (AMP)
+
+Batch size ~4–8
+
+Train models sequentially (not in parallel)
+
+🎯 Research Goal
+
+To conduct a three-representation comparative study:
+
+Spatial domain (RGB)
+
+Artifact-enhanced feature domain
+
+Fused representation
+
+Across six established architectures and one proposed hybrid model, with emphasis on cross-generator generalization evaluated using ROC-AUC on unseen test data.
