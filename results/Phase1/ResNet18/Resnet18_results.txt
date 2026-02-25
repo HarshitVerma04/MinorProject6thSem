@@ -2,20 +2,20 @@ Using device: cuda
 Class mapping: {'fake': 0, 'real': 1}
 
 Epoch [1/15]
-Train Loss: 0.0172 | Train Acc: 0.9929
-Val Loss:   0.0003 | Val Acc:   1.0000
+Train Loss: 0.0173 | Train Acc: 0.9928
+Val Loss:   0.0005 | Val Acc:   1.0000
 
 Epoch [2/15]
-Train Loss: 0.0025 | Train Acc: 0.9992
-Val Loss:   0.0043 | Val Acc:   0.9990
+Train Loss: 0.0029 | Train Acc: 0.9988
+Val Loss:   0.0065 | Val Acc:   0.9960
 
 Epoch [3/15]
-Train Loss: 0.0015 | Train Acc: 0.9994
+Train Loss: 0.0011 | Train Acc: 0.9999
 Val Loss:   0.0002 | Val Acc:   1.0000
 
 Epoch [4/15]
 Train Loss: 0.0001 | Train Acc: 1.0000
-Val Loss:   0.0002 | Val Acc:   1.0000
+Val Loss:   0.0001 | Val Acc:   1.0000
 
 Epoch [5/15]
 Train Loss: 0.0001 | Train Acc: 1.0000
@@ -23,18 +23,18 @@ Val Loss:   0.0001 | Val Acc:   1.0000
 
 Epoch [6/15]
 Train Loss: 0.0001 | Train Acc: 1.0000
-Val Loss:   0.0000 | Val Acc:   1.0000
+Val Loss:   0.0001 | Val Acc:   1.0000
 
 Epoch [7/15]
 Train Loss: 0.0001 | Train Acc: 1.0000
-Val Loss:   0.0000 | Val Acc:   1.0000
+Val Loss:   0.0001 | Val Acc:   1.0000
 
 Epoch [8/15]
 Train Loss: 0.0001 | Train Acc: 1.0000
 Val Loss:   0.0001 | Val Acc:   1.0000
 
 Epoch [9/15]
-Train Loss: 0.0002 | Train Acc: 0.9999
+Train Loss: 0.0001 | Train Acc: 1.0000
 Val Loss:   0.0001 | Val Acc:   1.0000
 
 Epoch [10/15]
@@ -64,13 +64,14 @@ Val Loss:   0.0001 | Val Acc:   1.0000
 Best model saved locally.
 
 ===== FINAL RESULTS =====
-Train Acc:       1.0000
-Validation Acc:  1.0000
-Test Seen Acc:   1.0000
-Test Unseen Acc: 0.8740
+Train Loss:       0.0003 | Train Acc:       1.0000
+Validation Loss:  0.0005 | Validation Acc:  1.0000
+Test Seen Loss:   0.0009 | Test Seen Acc:   0.9990
+Test Unseen Loss: 0.3050 | Test Unseen Acc: 0.8660
+Test Unseen AUC:  0.9999
 
 Confusion Matrix - Test Seen
-[[500   0]
+[[499   1]
  [  0 500]]
               precision    recall  f1-score   support
 
@@ -83,14 +84,14 @@ weighted avg       1.00      1.00      1.00      1000
 
 
 Confusion Matrix - Test Unseen
-[[811 189]
+[[799 201]
  [  0 500]]
               precision    recall  f1-score   support
 
-           0       1.00      0.81      0.90      1000
-           1       0.73      1.00      0.84       500
+           0       1.00      0.80      0.89      1000
+           1       0.71      1.00      0.83       500
 
     accuracy                           0.87      1500
-   macro avg       0.86      0.91      0.87      1500
-weighted avg       0.91      0.87      0.88      1500
+   macro avg       0.86      0.90      0.86      1500
+weighted avg       0.90      0.87      0.87      1500
 
