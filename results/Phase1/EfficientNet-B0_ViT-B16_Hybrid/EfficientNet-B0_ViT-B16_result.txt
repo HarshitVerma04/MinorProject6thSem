@@ -1,68 +1,78 @@
+Using device: cuda
+
 Class mapping: {'fake': 0, 'real': 1}
 
 
 Epoch [1/15]
-Train Loss: 0.0356 | Train Acc: 0.9890
-Val Loss:   0.0005 | Val Acc:   1.0000
+Train Loss: 0.0339 | Train Acc: 0.9898
+Val Loss:   0.0045 | Val Acc:   0.9970
 
 Epoch [2/15]
-Train Loss: 0.0226 | Train Acc: 0.9941
-Val Loss:   0.0007 | Val Acc:   1.0000
+Train Loss: 0.0231 | Train Acc: 0.9932
+Val Loss:   0.0001 | Val Acc:   1.0000
 
 Epoch [3/15]
-Train Loss: 0.0104 | Train Acc: 0.9968
+Train Loss: 0.0063 | Train Acc: 0.9982
 Val Loss:   0.0003 | Val Acc:   1.0000
 
 Epoch [4/15]
-Train Loss: 0.0050 | Train Acc: 0.9985
-Val Loss:   0.0002 | Val Acc:   1.0000
+Train Loss: 0.0040 | Train Acc: 0.9986
+Val Loss:   0.0000 | Val Acc:   1.0000
 
 Epoch [5/15]
-Train Loss: 0.0041 | Train Acc: 0.9988
-Val Loss:   0.0006 | Val Acc:   1.0000
+Train Loss: 0.0035 | Train Acc: 0.9989
+Val Loss:   0.0228 | Val Acc:   0.9940
 
 Epoch [6/15]
-Train Loss: 0.0005 | Train Acc: 0.9999
+Train Loss: 0.0014 | Train Acc: 0.9994
 Val Loss:   0.0001 | Val Acc:   1.0000
 
 Epoch [7/15]
-Train Loss: 0.0011 | Train Acc: 0.9996
-Val Loss:   0.0001 | Val Acc:   1.0000
+Train Loss: 0.0002 | Train Acc: 1.0000
+Val Loss:   0.0000 | Val Acc:   1.0000
 
 Epoch [8/15]
-Train Loss: 0.0009 | Train Acc: 0.9998
-Val Loss:   0.0003 | Val Acc:   1.0000
+Train Loss: 0.0001 | Train Acc: 1.0000
+Val Loss:   0.0000 | Val Acc:   1.0000
 
 Epoch [9/15]
-Train Loss: 0.0010 | Train Acc: 0.9996
-Val Loss:   0.0008 | Val Acc:   1.0000
+Train Loss: 0.0006 | Train Acc: 0.9998
+Val Loss:   0.0000 | Val Acc:   1.0000
 
 Epoch [10/15]
-Train Loss: 0.0003 | Train Acc: 0.9999
-Val Loss:   0.0001 | Val Acc:   1.0000
+Train Loss: 0.0001 | Train Acc: 1.0000
+Val Loss:   0.0020 | Val Acc:   0.9990
 
 Epoch [11/15]
-Train Loss: 0.0002 | Train Acc: 0.9999
-Val Loss:   0.0001 | Val Acc:   1.0000
+Train Loss: 0.0004 | Train Acc: 0.9999
+Val Loss:   0.0000 | Val Acc:   1.0000
 
 Epoch [12/15]
-Train Loss: 0.0001 | Train Acc: 1.0000
-Val Loss:   0.0001 | Val Acc:   1.0000
+Train Loss: 0.0000 | Train Acc: 1.0000
+Val Loss:   0.0000 | Val Acc:   1.0000
 
 Epoch [13/15]
-Train Loss: 0.0001 | Train Acc: 1.0000
-Val Loss:   0.0001 | Val Acc:   1.0000
+Train Loss: 0.0000 | Train Acc: 1.0000
+Val Loss:   0.0000 | Val Acc:   1.0000
 
 Epoch [14/15]
 Train Loss: 0.0001 | Train Acc: 1.0000
-Val Loss:   0.0001 | Val Acc:   1.0000
+Val Loss:   0.0000 | Val Acc:   1.0000
 
 Epoch [15/15]
-Train Loss: 0.0001 | Train Acc: 1.0000
+Train Loss: 0.0002 | Train Acc: 0.9999
 Val Loss:   0.0001 | Val Acc:   1.0000
 
 
 Best model saved locally.
+
+
+===== FINAL RESULTS =====
+Train Loss:       0.0002 | Train Acc:       1.0000
+Validation Loss:  0.0001 | Validation Acc:  1.0000
+Test Seen Loss:   0.0006 | Test Seen Acc:   1.0000
+Test Unseen Loss: 0.2869 | Test Unseen Acc: 0.8920
+Test Unseen AUC:  1.0000
 
 
 Confusion Matrix - Test Seen
@@ -78,15 +88,15 @@ Confusion Matrix - Test Seen
 weighted avg       1.00      1.00      1.00      1000
 
 
+
 Confusion Matrix - Test Unseen
-[[296 704]
+[[838 162]
  [  0 500]]
               precision    recall  f1-score   support
 
-           0       1.00      0.30      0.46      1000
-           1       0.42      1.00      0.59       500
+           0       1.00      0.84      0.91      1000
+           1       0.76      1.00      0.86       500
 
-    accuracy                           0.53      1500
-   macro avg       0.71      0.65      0.52      1500
-weighted avg       0.81      0.53      0.50      1500
-
+    accuracy                           0.89      1500
+   macro avg       0.88      0.92      0.89      1500
+weighted avg       0.92      0.89      0.89      1500
