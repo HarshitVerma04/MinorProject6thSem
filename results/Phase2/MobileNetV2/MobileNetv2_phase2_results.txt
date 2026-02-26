@@ -1,0 +1,88 @@
+Using device: cuda
+Class mapping: {'fake': 0, 'real': 1}
+
+===== MODEL PARAMETERS =====
+Total Parameters:     2,226,434
+Trainable Parameters: 2,226,434
+
+Epoch [1/15]
+Train Loss: 0.0849 | Train Acc: 0.9735
+Val Loss:   0.0032 | Val Acc:   1.0000
+
+Epoch [2/15]
+Train Loss: 0.0141 | Train Acc: 0.9964
+Val Loss:   0.0114 | Val Acc:   0.9960
+
+Epoch [3/15]
+Train Loss: 0.0075 | Train Acc: 0.9984
+Val Loss:   0.0003 | Val Acc:   1.0000
+
+Epoch [4/15]
+Train Loss: 0.0075 | Train Acc: 0.9974
+Val Loss:   0.0006 | Val Acc:   1.0000
+
+Epoch [5/15]
+Train Loss: 0.0040 | Train Acc: 0.9986
+Val Loss:   0.0013 | Val Acc:   1.0000
+
+Epoch [6/15]
+Train Loss: 0.0035 | Train Acc: 0.9986
+Val Loss:   0.0004 | Val Acc:   1.0000
+
+Epoch [7/15]
+Train Loss: 0.0025 | Train Acc: 0.9990
+Val Loss:   0.0002 | Val Acc:   1.0000
+
+Epoch [8/15]
+Train Loss: 0.0011 | Train Acc: 0.9998
+Val Loss:   0.0001 | Val Acc:   1.0000
+
+Epoch [9/15]
+Train Loss: 0.0013 | Train Acc: 0.9999
+Val Loss:   0.0002 | Val Acc:   1.0000
+
+Epoch [10/15]
+Train Loss: 0.0006 | Train Acc: 0.9999
+Val Loss:   0.0001 | Val Acc:   1.0000
+
+Epoch [11/15]
+Train Loss: 0.0009 | Train Acc: 0.9998
+Val Loss:   0.0001 | Val Acc:   1.0000
+
+Epoch [12/15]
+Train Loss: 0.0006 | Train Acc: 0.9999
+Val Loss:   0.0001 | Val Acc:   1.0000
+
+Epoch [13/15]
+Train Loss: 0.0008 | Train Acc: 0.9996
+Val Loss:   0.0001 | Val Acc:   1.0000
+
+Epoch [14/15]
+Train Loss: 0.0008 | Train Acc: 0.9998
+Val Loss:   0.0001 | Val Acc:   1.0000
+
+Epoch [15/15]
+Train Loss: 0.0008 | Train Acc: 0.9998
+Val Loss:   0.0001 | Val Acc:   1.0000
+
+Best model saved locally.
+
+===== FINAL RESULTS =====
+Train Loss:       0.0043 | Train Acc:       0.9996
+Validation Loss:  0.0032 | Validation Acc:  1.0000
+Test Seen Loss:   0.0109 | Test Seen Acc:   0.9970
+Test Unseen Loss: 0.2734 | Test Unseen Acc: 0.8860
+Test Unseen AUC:  0.9990
+
+Confusion Matrix - Test Unseen
+[[829 171]
+ [  0 500]]
+              precision    recall  f1-score   support
+
+           0       1.00      0.83      0.91      1000
+           1       0.75      1.00      0.85       500
+
+    accuracy                           0.89      1500
+   macro avg       0.87      0.91      0.88      1500
+weighted avg       0.92      0.89      0.89      1500
+
