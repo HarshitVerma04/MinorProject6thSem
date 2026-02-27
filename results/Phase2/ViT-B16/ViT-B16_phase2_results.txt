@@ -1,0 +1,125 @@
+Using device: cuda
+
+Class mapping: {'fake': 0, 'real': 1}
+
+
+===== MODEL PARAMETERS =====
+Total Parameters:     85,800,194
+Trainable Parameters: 85,800,194
+
+
+Epoch [1/15]
+Train Loss: 0.7043 | Train Acc: 0.4960
+Val Loss:   0.6945 | Val Acc:   0.5000
+
+Epoch [2/15]
+Train Loss: 0.7039 | Train Acc: 0.5028
+Val Loss:   0.6933 | Val Acc:   0.5000
+
+Epoch [3/15]
+Train Loss: 0.6984 | Train Acc: 0.4953
+Val Loss:   0.6972 | Val Acc:   0.5000
+
+Epoch [4/15]
+Train Loss: 0.6976 | Train Acc: 0.4923
+Val Loss:   0.6999 | Val Acc:   0.5000
+
+Epoch [5/15]
+Train Loss: 0.6968 | Train Acc: 0.4980
+Val Loss:   0.6938 | Val Acc:   0.5000
+
+Epoch [6/15]
+Train Loss: 0.6934 | Train Acc: 0.5028
+Val Loss:   0.6935 | Val Acc:   0.5000
+
+Epoch [7/15]
+Train Loss: 0.6935 | Train Acc: 0.4995
+Val Loss:   0.6933 | Val Acc:   0.5000
+
+Epoch [8/15]
+Train Loss: 0.6936 | Train Acc: 0.5009
+Val Loss:   0.6932 | Val Acc:   0.5000
+
+Epoch [9/15]
+Train Loss: 0.6934 | Train Acc: 0.5010
+Val Loss:   0.6934 | Val Acc:   0.5000
+
+Epoch [10/15]
+Train Loss: 0.6934 | Train Acc: 0.4991
+Val Loss:   0.6938 | Val Acc:   0.5000
+
+Epoch [11/15]
+Train Loss: 0.6935 | Train Acc: 0.5000
+Val Loss:   0.6932 | Val Acc:   0.5000
+
+Epoch [12/15]
+Train Loss: 0.6932 | Train Acc: 0.4950
+Val Loss:   0.6932 | Val Acc:   0.5000
+
+Epoch [13/15]
+Train Loss: 0.6932 | Train Acc: 0.5000
+Val Loss:   0.6931 | Val Acc:   0.5000
+
+Epoch [14/15]
+Train Loss: 0.6932 | Train Acc: 0.4945
+Val Loss:   0.6931 | Val Acc:   0.5000
+
+Epoch [15/15]
+Train Loss: 0.6932 | Train Acc: 0.4941
+Val Loss:   0.6931 | Val Acc:   0.5000
+
+
+Best model saved locally.
+
+
+===== FINAL RESULTS =====
+Train Loss:       0.6945 | Train Acc:       0.5000
+Validation Loss:  0.6945 | Validation Acc:  0.5000
+Test Seen Loss:   0.6945 | Test Seen Acc:   0.5000
+Test Unseen Loss: 0.6770 | Test Unseen Acc: 0.6667
+Test Unseen AUC:  0.2580
+
+
+
+Confusion Matrix - Test Seen
+[[500   0]
+ [500   0]]
+              precision    recall  f1-score   support
+
+           0       0.50      1.00      0.67       500
+           1       0.00      0.00      0.00       500
+
+    accuracy                           0.50      1000
+   macro avg       0.25      0.50      0.33      1000
+weighted avg       0.25      0.50      0.33      1000
+
+
+C:\Users\harsh\anaconda3\envs\minor_project_env\lib\site-packages\sklearn\metrics\_classification.py:1731: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+C:\Users\harsh\anaconda3\envs\minor_project_env\lib\site-packages\sklearn\metrics\_classification.py:1731: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+C:\Users\harsh\anaconda3\envs\minor_project_env\lib\site-packages\sklearn\metrics\_classification.py:1731: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+
+
+Confusion Matrix - Test Unseen
+[[1000    0]
+ [ 500    0]]
+              precision    recall  f1-score   support
+
+           0       0.67      1.00      0.80      1000
+           1       0.00      0.00      0.00       500
+
+    accuracy                           0.67      1500
+   macro avg       0.33      0.50      0.40      1500
+weighted avg       0.44      0.67      0.53      1500
+
+
+C:\Users\harsh\anaconda3\envs\minor_project_env\lib\site-packages\sklearn\metrics\_classification.py:1731: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+C:\Users\harsh\anaconda3\envs\minor_project_env\lib\site-packages\sklearn\metrics\_classification.py:1731: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+C:\Users\harsh\anaconda3\envs\minor_project_env\lib\site-packages\sklearn\metrics\_classification.py:1731: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+
+
