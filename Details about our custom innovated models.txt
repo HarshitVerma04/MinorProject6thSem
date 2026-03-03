@@ -1,0 +1,113 @@
+1) DMFNet – Description
+What is DMFNet?
+
+DMFNet is a dual-backbone gated fusion architecture that combines features extracted from two CNN models — ResNet18 and MobileNetV2 — and dynamically learns their relative importance during classification.
+
+Why is it called DMFNet?
+
+DMFNet stands for:
+
+Dual-Model Fusion Network
+
+Dual → Two backbone networks
+
+Model → ResNet18 + MobileNetV2
+
+Fusion → Features combined using learned gating weights
+
+Network → End-to-end trainable architecture
+
+The name reflects both its structure and function.
+
+DMFNet Architecture (Concise)
+
+Input image → passed into:
+
+ResNet18 (feature extractor)
+
+MobileNetV2 (feature extractor)
+
+Extracted feature vectors:
+
+ResNet18 → 512-dim
+
+MobileNetV2 → 1280-dim
+
+Projection layers:
+
+Both feature vectors projected to 256 dimensions
+
+Gating mechanism:
+
+Concatenated projected features
+
+Passed through a small gating network
+
+Learns adaptive weights for each backbone
+
+Weighted fusion:
+
+Final fused feature = weighted sum of projected features
+
+Final classifier:
+
+Linear layer → 2 classes (Real / AI-generated)
+
+Key idea:
+DMFNet adaptively balances two CNN feature representations instead of naive concatenation.
+
+
+
+
+
+2)HTFNet – Description
+What is HTFNet?
+
+HTFNet is a hybrid CNN–Transformer fusion architecture that combines feature representations from EfficientNet-B0 (CNN) and ViT-B/16 (Vision Transformer) to leverage both local texture-based features and global attention-based representations for AI-generated face detection.
+
+Why is it called HTFNet?
+
+HTFNet stands for:
+
+Hybrid Transformer-CNN Fusion Network
+
+Hybrid → Combines two different architectural families
+
+Transformer → ViT-B/16 backbone
+
+Fusion → Feature-level combination
+
+Network → End-to-end trainable architecture
+
+The name reflects the integration of convolutional and transformer-based feature extraction within a unified framework.
+
+HTFNet Architecture (Concise)
+
+Input image → passed into:
+
+EfficientNet-B0 (CNN feature extractor)
+
+ViT-B/16 (Transformer feature extractor)
+
+Extracted feature vectors:
+
+EfficientNet-B0 → 1280-dim embedding
+
+ViT-B/16 → 768-dim embedding
+
+Projection layers:
+
+Each embedding projected to 256 dimensions using linear layers
+
+Feature fusion:
+
+Projected features concatenated to form a 512-dim fused representation
+
+Classification head:
+
+Multi-layer perceptron (MLP)
+
+Final linear layer → 2 classes (Real / AI-generated)
+
+Key idea:
+HTFNet combines spatially localized convolutional features with globally attended transformer representations through feature-level fusion.
