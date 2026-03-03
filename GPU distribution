@@ -1,37 +1,46 @@
-💻 GPU Distribution (Final Optimized Plan)
-🟢 GTX 1650 Laptop (Stable, Lighter Models)
+GPU Distribution (Final Optimized Plan)
 
-Train:
+GTX 1650 Laptop (4GB – Stable Models)
 
-1️⃣ MobileNetV2
-2️⃣ ResNet18
-3️⃣ EfficientNet-B0
+Trained:
 
-Why:
+ResNet18
 
-All three are parameter-efficient
+DenseNet121
 
-Stable on 4GB
-
-Moderate training time
-
-Good baselines
-
-🔵 RTX 3050 Laptop (Heavier / Important Models)
-
-Train:
-
-4️⃣ DenseNet121
-5️⃣ VGG16
-6️⃣ ViT-B/16
-7️⃣ Proposed Hybrid Model
+DMF-Net (ResNet18 + DenseNet121 Hybrid)
 
 Why:
 
-DenseNet → memory heavy (feature concatenation)
+All three are CNN-based models
 
-VGG16 → large parameter count
+More stable on smaller GPUs
 
-ViT → transformer needs AMP
+Manageable memory usage compared to transformer models
 
-Proposed Hybrid → most important model, needs best GPU
+Good convolutional baselines for frequency-based learning
+
+Suitable for 4GB VRAM environment
+
+RTX 3050 Ti Laptop (Heavier / Transformer-Based Models)
+
+Trained:
+
+EfficientNet-B0
+
+ViT-B/16
+
+EfficientNet-B0 + ViT-B/16 Hybrid
+
+Why:
+
+ViT-B/16 is transformer-based and computationally heavy
+
+Hybrid model combines two large backbones and requires higher memory
+
+EfficientNet-B0 used as strong baseline on higher-capability GPU
+
+Better CUDA cores and throughput on 3050 Ti improve training stability
+
+Most computationally important experiments allocated to stronger GPU
+
