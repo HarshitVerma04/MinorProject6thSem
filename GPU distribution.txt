@@ -1,46 +1,41 @@
-GPU Distribution (Final Optimized Plan)
+GPU Distribution and Training Environment
 
-GTX 1650 Laptop (4GB – Stable Models)
+Hardware Used:
 
-Trained:
+NVIDIA GTX 1650 (4GB VRAM)
 
-ResNet18
+NVIDIA RTX 3050
 
-DenseNet121
+All models were trained individually on a single GPU (no multi-GPU training).
 
-DMF-Net (ResNet18 + DenseNet121 Hybrid)
+GPU Allocation:
 
-Why:
+A) GTX 1650:
 
-All three are CNN-based models
+1)ResNet18
 
-More stable on smaller GPUs
+2)MobileNetV2
 
-Manageable memory usage compared to transformer models
+3)DMFNet (ResNet18 + MobileNetV2 gated fusion)
 
-Good convolutional baselines for frequency-based learning
+B) RTX 3050:
 
-Suitable for 4GB VRAM environment
+1)EfficientNet-B0
 
-RTX 3050 Ti Laptop (Heavier / Transformer-Based Models)
+2)ViT-B/16
 
-Trained:
+3)Hybrid (EfficientNet-B0 + ViT-B/16 fusion)
 
-EfficientNet-B0
+Training Setup:
 
-ViT-B/16
+->Batch size: 8 (standardized across all models)
 
-EfficientNet-B0 + ViT-B/16 Hybrid
+->Optimizer: Adam
 
-Why:
+->Scheduler: StepLR
 
-ViT-B/16 is transformer-based and computationally heavy
+->Deterministic training enabled (seed fixed to 42)
 
-Hybrid model combines two large backbones and requires higher memory
+No mixed precision used
 
-EfficientNet-B0 used as strong baseline on higher-capability GPU
-
-Better CUDA cores and throughput on 3050 Ti improve training stability
-
-Most computationally important experiments allocated to stronger GPU
-
+All experiments were conducted sequentially with consistent preprocessing and evaluation protocols.
