@@ -4,7 +4,7 @@ Hardware Used:
 
 NVIDIA GTX 1650 (4GB VRAM)
 
-NVIDIA RTX 3050
+NVIDIA RTX 3050 (4GB VRAM)
 
 All models were trained individually on a single GPU (no multi-GPU training).
 
