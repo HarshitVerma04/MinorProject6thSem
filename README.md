@@ -5,11 +5,11 @@
 This repository contains the implementation and experimental workflow for our **6th Semester Minor Project**.
 The project includes model development, experimentation through Jupyter notebooks, supporting scripts, and the results generated during the experiments.
 
-Phase 1: It contains the baseline experiments where models are trained and evaluated on clean rgb images after compression.
+Phase 1: It contains the baseline experiments where models are trained and evaluated on clean rgb images without compression.
 
 Phase 2: It contains the experiments where models are trained after applying highpass filter and then evaluated.
 
-Robustness Testing: This consists of robustness evaluation under distribution shift caused by JPEG compression and high pass filter.
+Robustness Testing: This consists of robustness evaluation under distribution shift caused by JPEG compression.
 
 ---
 
